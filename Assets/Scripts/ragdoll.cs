@@ -54,21 +54,18 @@ public class ragdoll : MonoBehaviour
 
         
     }
-
-    void OnCollisionEnter(Collision collisioninfo)
+    private void OnTriggerEnter(Collider other)
     {
         //collision with ground
-        if (collisioninfo.gameObject.tag =="Ground")
+        if (other.gameObject.tag == "Ground")
         {
             isGrounded = true;
         }
-        
     }
-
-    private void OnCollisionExit(Collision collisioninfo)
+    private void OnTriggerExit(Collider other)
     {
         //off the ground
-        if (collisioninfo.gameObject.tag == "Ground")
+        if (other.gameObject.tag == "Ground")
         {
             isGrounded = false;
         }
