@@ -332,8 +332,8 @@ GameObject:
   - component: {fileID: 103014516}
   - component: {fileID: 103014515}
   - component: {fileID: 103014519}
-  - component: {fileID: 103014521}
   - component: {fileID: 103014520}
+  - component: {fileID: 103014521}
   m_Layer: 6
   m_Name: Hips
   m_TagString: Untagged
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 103014514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec321325508219047b5e75e3d15e0766, type: 3}
+  m_Script: {fileID: 11500000, guid: 783b78e3a7260424f81afc16ee655b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 375049289}
@@ -3870,26 +3870,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1177551766
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400511055}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 34170aa351c418d40900152936f76a49, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1219201933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,7 +4316,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1400511056}
-  - component: {fileID: 1177551766}
   m_Layer: 0
   m_Name: PlayerRagdoll
   m_TagString: Untagged
