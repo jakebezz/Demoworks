@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Animator animator;
-
-    //DELETE THIS COMMENT 
+    [SerializeField] Animator animator;
 
     //Playermovement speed
-    public float speed;
+    [SerializeField] float speed;
 
     //Hip rigidbody
-    public Rigidbody hips;
-
-    //Bool to check if player is touching the ground
-    public bool isGrounded;
+    [SerializeField] Rigidbody hips;
 
     private void Start()
     {

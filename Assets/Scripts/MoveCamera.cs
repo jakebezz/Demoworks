@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    public float distanceOffset;
-    public float heightOffset;
-    public float directionOffset;
-    public Transform player;
+    [SerializeField] private float distanceOffset;
+    [SerializeField] private float heightOffset;
+    [SerializeField] private float directionOffset;
+    [SerializeField] private Transform player;
     
     void Update()
     {

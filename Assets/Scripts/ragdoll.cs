@@ -2,27 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ragdoll : MonoBehaviour
+public class Ragdoll : MonoBehaviour
 {
     //array for all the joints that is used to make the player ragdoll
-    public ConfigurableJoint[] ragdollJoints = new ConfigurableJoint[] {};
+    [SerializeField] private ConfigurableJoint[] ragdollJoints = new ConfigurableJoint[] {};
 
-    public JointDrive joint;
+    [SerializeField] private JointDrive joint;
 
     //bool for determining whether player is on the ground
-    private bool isGrounded = true;
+    public bool isGrounded = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
-
         if (isGrounded == false)
         {
             foreach (ConfigurableJoint Rjoint in ragdollJoints)
@@ -51,8 +42,6 @@ public class ragdoll : MonoBehaviour
                 Rjoint.angularXDrive = joint;
             }
         }
-
-        
     }
     private void OnTriggerEnter(Collider other)
     {

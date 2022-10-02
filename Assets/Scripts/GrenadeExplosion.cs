@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrenadeScript : MonoBehaviour
+public class GrenadeExplosion : MonoBehaviour
 {
     //Time it takes for grenade to explode
-    public float delay = 3f;
+    [SerializeField] private float delay = 0f;
     //Radius of explosion
-    public float radius = 5f;
+    [SerializeField] private float radius = 0f;
     //Force of explosion
-    public float force = 700f;
-
-    public float upwardsModifier = 3f;
+    [SerializeField] private float force = 0f;
+    //Forces explosion up
+    [SerializeField] private float upwardsModifier = 0f;
 
     //Used to actually delay the explosion
-    float countdown;
-    bool hasExploded = false;
+    private float countdown;
+    private bool hasExploded = false;
 
     void Start()
     {

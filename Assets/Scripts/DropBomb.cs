@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DropBomb : MonoBehaviour
 {
-    public GameObject bomb;
-    public GameObject spawnLocation;
+    [SerializeField] private GameObject bomb;
+    [SerializeField] private GameObject spawnLocation;
    
     void Update()
     {

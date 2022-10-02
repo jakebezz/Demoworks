@@ -547,7 +547,6 @@ MonoBehaviour:
   animator: {fileID: 375049289}
   speed: 150
   hips: {fileID: 103014519}
-  isGrounded: 0
 --- !u!1 &189850185
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,7 +755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLimb: {fileID: 189850186}
+  joint: {fileID: 0}
   mirror: 0
+  active: 0
+  groundChecker: {fileID: 2070771387}
 --- !u!1 &335712620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLimb: {fileID: 2082162012}
+  joint: {fileID: 0}
   mirror: 1
+  active: 0
+  groundChecker: {fileID: 2070771387}
 --- !u!1 &375049287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1680,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLimb: {fileID: 2046759977}
+  joint: {fileID: 0}
   mirror: 1
+  active: 0
+  groundChecker: {fileID: 2070771387}
 --- !u!1 &424747906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,7 +2934,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLimb: {fileID: 1694708106}
+  joint: {fileID: 0}
   mirror: 0
+  active: 0
+  groundChecker: {fileID: 2070771387}
 --- !u!1 &812217734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,7 +4008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743bd64bc685e6b42a637725f36c52a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb: {fileID: 693218932073285565, guid: 0cdf92c642a1d03408725a831a4a9e4a, type: 3}
+  bomb: {fileID: 3299902887431475302, guid: 86303c71eb8f52b409465dc01ac27c05, type: 3}
   spawnLocation: {fileID: 8695682078491267627}
 --- !u!1 &1260928912
 GameObject:
@@ -6132,6 +6143,7 @@ MonoBehaviour:
   - {fileID: 411851945}
   - {fileID: 696560458}
   - {fileID: 458620199}
+  isGrounded: 1
 --- !u!65 &2070771390
 BoxCollider:
   m_ObjectHideFlags: 0
