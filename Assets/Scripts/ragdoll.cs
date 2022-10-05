@@ -12,6 +12,15 @@ public class Ragdoll : MonoBehaviour
     //bool for determining whether player is on the ground
     public bool isGrounded = true;
 
+    //Audio Controll
+    AudioSource audioSource;
+    public AudioClip[] audioClip;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (isGrounded == false)
@@ -57,6 +66,14 @@ public class Ragdoll : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             isGrounded = false;
+            PlaySound();
         }
+    }
+
+    void PlaySound()
+    {
+        int rng = Random.Range(0, 6);
+        audioSource.clip = audioClip[rng];
+        audioSource.Play();
     }
 }
