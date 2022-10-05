@@ -18,10 +18,15 @@ public class PlayerAudio : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        
+    }
+
     void Update()
     {
         //This didnt work when it was set to false, not sure why
-        if(ragdoll.isGrounded == false)
+        if(groundChecker)
         {
             PlaySound();
         }
