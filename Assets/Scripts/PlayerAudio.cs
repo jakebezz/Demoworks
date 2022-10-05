@@ -21,7 +21,7 @@ public class PlayerAudio : MonoBehaviour
     void Update()
     {
         //This didnt work when it was set to false, not sure why
-        if(ragdoll.isGrounded == true)
+        if(ragdoll.isGrounded == false)
         {
             PlaySound();
         }

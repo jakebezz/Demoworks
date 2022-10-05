@@ -1384,7 +1384,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9237fb4b1c0b517438d7457c6d9c521b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.005
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4157,7 +4157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743bd64bc685e6b42a637725f36c52a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb: {fileID: 3299902887431475302, guid: 86303c71eb8f52b409465dc01ac27c05, type: 3}
+  bomb: {fileID: 693218932073285565, guid: 0cdf92c642a1d03408725a831a4a9e4a, type: 3}
   spawnLocation: {fileID: 8695682078491267627}
 --- !u!1 &1260928912
 GameObject:
