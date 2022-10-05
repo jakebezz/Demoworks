@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
                 hips.AddForce(hips.transform.forward * speed);
             }
         }
-
+        
 
         if (Input.GetKey(KeyCode.S))
         {
