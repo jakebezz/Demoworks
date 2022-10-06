@@ -331,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 3
   radius: 5
-  force: 1000
+  force: 5000
   upwardsModifier: 1
 --- !u!1 &5255502956762664643
 GameObject:

@@ -13,13 +13,8 @@ public class Ragdoll : MonoBehaviour
     public bool isGrounded = true;
 
     //Audio Controll
-    AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip[] audioClip;
-
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     void Update()
     {
