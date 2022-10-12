@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain Chunk 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1042325300591894154, guid: 168485841e91e724c8f625fff397b5b2, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 1042325300591894157, guid: 168485841e91e724c8f625fff397b5b2, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1406,7 +1410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833842009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.37, y: 4.02, z: 0}
+  m_LocalPosition: {x: -9.24, y: 4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2460,8 +2464,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219201933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.64, z: 19.2}
-  m_LocalScale: {x: 1486.6, y: 1, z: 3}
+  m_LocalPosition: {x: 50.7, y: 0, z: -0.16}
+  m_LocalScale: {x: 122, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3319,7 +3323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983459580931685005, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2983459580984112826, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
       propertyPath: m_TagString
@@ -3335,7 +3339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983459582104011868, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2983459582572006454, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
       propertyPath: m_TagString
@@ -3343,7 +3347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983459582756432995, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2983459582798836944, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
       propertyPath: m_TagString
@@ -3396,6 +3400,10 @@ PrefabInstance:
     - target: {fileID: 7501582232660713103, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
       propertyPath: m_Name
       value: Terrain Chunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501582232660713103, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7f6cf0daf3954468de24ee4cac4545, type: 3}
@@ -3915,6 +3923,10 @@ PrefabInstance:
       propertyPath: ragdollJoints.Array.data[4]
       value: 
       objectReference: {fileID: 458620199}
+    - target: {fileID: 7999734746282168285, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2770141
+      objectReference: {fileID: 0}
     - target: {fileID: 7999734746683335470, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: m_Name
       value: PlayerRagdoll
@@ -3925,7 +3937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7999734746683335473, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.761
       objectReference: {fileID: 0}
     - target: {fileID: 7999734746683335473, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3979,6 +3991,10 @@ PrefabInstance:
       propertyPath: targetLimb
       value: 
       objectReference: {fileID: 2046759977}
+    - target: {fileID: 7999734748072188182, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Constraints
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7999734748072188184, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: animator
       value: 

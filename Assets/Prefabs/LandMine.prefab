@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5727080015938391364}
-  - component: {fileID: 9078163452644681197}
+  - component: {fileID: -3641970435772585076}
   - component: {fileID: -2002878344523545036}
   m_Layer: 0
   m_Name: LandMine
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9078163452644681197
+--- !u!114 &-3641970435772585076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,12 +43,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 693218932073285565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84cda68b73aa0e34d9905533162b4d63, type: 3}
+  m_Script: {fileID: 11500000, guid: b6e87854d0abedf4b9191d26bcceff87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
   radius: 5
-  force: 700
+  force: 1000
   upwardsModifier: 0
 --- !u!54 &-2002878344523545036
 Rigidbody:
@@ -64,7 +63,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &2921471129812393850
 GameObject:

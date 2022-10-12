@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrenadeExplosion : MonoBehaviour
+public class GrenadeExplosion : Explosives
 {
     //Time it takes for grenade to explode
     [SerializeField] private float delay = 0f;
-    //Radius of explosion
-    [SerializeField] private float radius = 0f;
-    //Force of explosion
-    [SerializeField] private float force = 0f;
-    //Forces explosion up
-    [SerializeField] private float upwardsModifier = 0f;
 
     //Used to actually delay the explosion
     private float countdown;
@@ -34,25 +28,5 @@ public class GrenadeExplosion : MonoBehaviour
             hasExploded = true;
         }
 
-    }
-
-    void Explode()
-    {
-        //Get nearby object + add force + damage
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-
-        foreach (Collider nearbyObject in colliders)
-        {
-            Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
-
-            //Adds force to the nearby objects
-            if (rb != null)
-            {
-                rb.AddExplosionForce(force, transform.position, radius, upwardsModifier);
-            }
-        }
-
-        //Remove grnade
-        Destroy(gameObject);
     }
 }
