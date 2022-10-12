@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class GrenadeExplosion : Explosives
 {
-    //Time it takes for grenade to explode
-    [SerializeField] private float delay = 0f;
 
-    //Used to actually delay the explosion
-    private float countdown;
-    private bool hasExploded = false;
-
-    void Start()
+    public void Start()
     {
         //Sets countdown to delay
         countdown = delay;

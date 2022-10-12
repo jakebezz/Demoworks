@@ -8,7 +8,15 @@ public class Explosives : MonoBehaviour
     //Force of explosion
     [SerializeField] public float force = 0f;
     //Forces explosion up
-    [SerializeField] public float upwardsModifier = 0f;
+    [SerializeField] public float upwardsModifier = 0f; 
+    //Time it takes for grenade to explode
+    [SerializeField] public  float delay = 0f;
+    
+    //Used to actually delay the explosion
+    public float countdown;
+    public bool hasExploded = false;
+    
+   
 
     public void Explode()
     {
