@@ -13,7 +13,6 @@ public class Ragdoll : MonoBehaviour
     public bool isGrounded = true;
 
     //Audio Controll
-    public AudioSource audioSource;
     public AudioClip[] audioClip;
 
     void Update()
@@ -68,7 +67,6 @@ public class Ragdoll : MonoBehaviour
     void PlaySound()
     {
         int rng = Random.Range(0, 6);
-        audioSource.clip = audioClip[rng];
-        audioSource.Play();
+        AudioManager.Instance.PlaySound(audioClip[rng]);
     }
 }

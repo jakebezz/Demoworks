@@ -90,6 +90,5 @@ public class PlayerController : MonoBehaviour
                 hips.AddForce(-hips.transform.forward * speed);
             }
         }
-        
     }
 }

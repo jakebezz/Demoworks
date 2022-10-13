@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GrenadeExplosion : Explosives
 {
-
     public void Start()
     {
         //Sets countdown to delay

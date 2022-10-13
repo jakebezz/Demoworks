@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-  
-
     //Audio clip instead of Audio source so that sound can be played when destroying coin
     [SerializeField] private AudioClip audioClip;
 
@@ -22,7 +20,7 @@ public class Coin : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             //Plays audioClip at the position of the coin
-            AudioSource.PlayClipAtPoint(audioClip, transform.position);
+            AudioManager.Instance.PlaySoundAtPoint(audioClip, gameObject.transform.position);
             Destroy(gameObject);
         }
     }
