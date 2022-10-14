@@ -5,8 +5,8 @@ using UnityEngine;
 public class GrenadeExplosion : Explosives
 {
     //Variables for getting and coverting mouse position
-    [SerializeField] private Vector3 screenPosition;
-    [SerializeField] private Vector3 worldPosition;
+    private Vector3 screenPosition;
+    private Vector3 worldPosition;
     //LayerMask to be hit by mouse, set this to MouseLayer if it has been reset
     [SerializeField] private LayerMask layerMask;
 

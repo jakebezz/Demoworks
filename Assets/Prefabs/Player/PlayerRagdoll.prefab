@@ -3989,4 +3989,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   speed: 150
-  hips: {fileID: 7999734748072188182}
