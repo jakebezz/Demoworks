@@ -314,9 +314,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
-  force: 5000
-  upwardsModifier: 1
+  force: 500
+  upwardsModifier: 0
   delay: 3
+  countdown: 0
+  hasExploded: 0
+  screenPosition: {x: 0, y: 0, z: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!54 &-700509574988245993
 Rigidbody:
   m_ObjectHideFlags: 0

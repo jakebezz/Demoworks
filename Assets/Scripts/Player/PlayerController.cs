@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     //Playermovement speed
     [SerializeField] float speed;
 
-    //Hip rigidbody
-    [SerializeField] Rigidbody hips;
+    //Hip rigidbody, static because it is part of a child object - makes it far easier to work with and only way i could add force towards the mouse position
+    public static Rigidbody hips;
 
     private void Start()
     {

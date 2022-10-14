@@ -167,6 +167,7 @@ MonoBehaviour:
   spawnLocationGrenade: {fileID: 7999734746124902561}
   character: {fileID: 7999734748072188179}
   tempGrenade: {fileID: 0}
+  playerObj: {fileID: 0}
 --- !u!1 &7999734746124902561
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +700,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ragdollJoints: []
   isGrounded: 1
-  audioSource: {fileID: 0}
   audioClip: []
 --- !u!1 &7999734746413329260
 GameObject:
@@ -937,7 +937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7999734746683335470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3788,7 +3788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7999734748072188179}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.41, y: -0.02, z: 0.19}
+  m_LocalPosition: {x: 2.3914642, y: 7.7387466, z: -2.328}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
