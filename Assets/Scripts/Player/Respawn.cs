@@ -21,6 +21,9 @@ public class Respawn : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("touched");
-        player.transform.position = respawnPoint.transform.position;
+        if (other.CompareTag("Player"))
+        {
+            player.transform.position = respawnPoint.transform.position;
+        }
     }
 }
