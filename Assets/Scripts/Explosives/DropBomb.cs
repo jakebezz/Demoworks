@@ -9,32 +9,55 @@ public class DropBomb : MonoBehaviour
     [SerializeField] private GameObject spawnLocationLandmine;
     [SerializeField] private GameObject spawnLocationGrenade;
     public GameObject character;
+
     //For Testing
     [SerializeField] private GameObject tempGrenade;
 
+
     private GameObject clone;
 
-    PlayerController player;
+    private float coolDown = 0;
+    private bool pressed = false;
+    
     [SerializeField] GameObject playerObj;
 
     private void Start()
     {
-        player = playerObj.GetComponent<PlayerController>();
+        
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+       
+
+        
+        if (pressed == true)
         {
-            clone = Instantiate(landMine, new Vector3(spawnLocationLandmine.transform.position.x, spawnLocationLandmine.transform.position.y, spawnLocationLandmine.transform.position.z), new Quaternion(0, 0, 0, 0));
-            clone.GetComponent<Rigidbody>().AddForce(transform.right * 500);
-            clone.GetComponent<Rigidbody>().AddForce(transform.up * 500);
+            coolDown -= Time.deltaTime;
+            if(coolDown <= 0)
+            {
+                pressed = false;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.B))
+
+        if (Input.GetKeyDown(KeyCode.Space) && pressed == false)
+        {
+            Vector3 playerVelocity = character.GetComponent<Rigidbody>().velocity;
+            coolDown = 3;
+            clone = Instantiate(landMine, new Vector3(spawnLocationLandmine.transform.position.x, spawnLocationLandmine.transform.position.y, spawnLocationLandmine.transform.position.z), new Quaternion(0, 0, 0, 0));
+            clone.GetComponent<Rigidbody>().velocity = playerVelocity;
+            clone.GetComponent<Rigidbody>().AddForce(transform.right * 500 + transform.up * 500);
+            
+            pressed = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.B) && pressed == false)
         {
             clone = Instantiate(grenade, new Vector3(spawnLocationGrenade.transform.position.x, spawnLocationGrenade.transform.position.y, spawnLocationGrenade.transform.position.z), new Quaternion(0, 0, 0, 0));
+            coolDown = 3;
+            pressed = true;
         }
-        if(Input.GetKeyDown(KeyCode.K))
+        else if(Input.GetKeyDown(KeyCode.K) && pressed == false)
         {
             clone = Instantiate(tempGrenade, new Vector3(spawnLocationGrenade.transform.position.x, spawnLocationGrenade.transform.position.y, spawnLocationGrenade.transform.position.z), new Quaternion(0, 0, 0, 0));
         }

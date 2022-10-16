@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] Animator animator;
 
+    public Ragdoll groundCheck;
+
     //Playermovement speed
     [SerializeField] float speed;
 
@@ -18,7 +20,7 @@ public class PlayerController : MonoBehaviour
     //Animation set in Update, FixedUpdate is reserved for physics related code
     private void Update()
     {
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.W) && groundCheck.isGrounded == true)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -41,7 +43,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isRun", false);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && groundCheck.isGrounded == true)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -61,7 +63,7 @@ public class PlayerController : MonoBehaviour
     //Fixed Update rather than Update because we're using physics
     private void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.W) && groundCheck.isGrounded == true)
         {
             if(Input.GetKey(KeyCode.LeftShift))
             {
@@ -75,7 +77,7 @@ public class PlayerController : MonoBehaviour
         }
         
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && groundCheck.isGrounded == true)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {

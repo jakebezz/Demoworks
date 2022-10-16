@@ -12,11 +12,20 @@ public class Ragdoll : MonoBehaviour
     //bool for determining whether player is on the ground
     public bool isGrounded = true;
 
+   
+
     //Audio Controll
     public AudioClip[] audioClip;
 
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
+        
+
         if (isGrounded == false)
         {
             foreach (ConfigurableJoint Rjoint in ragdollJoints)
