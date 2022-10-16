@@ -2753,6 +2753,7 @@ GameObject:
   - component: {fileID: 7999734747835005992}
   - component: {fileID: 7999734747835005993}
   - component: {fileID: 7687288866021334298}
+  - component: {fileID: 7284195116507511925}
   m_Layer: 6
   m_Name: Head
   m_TagString: Player
@@ -2966,6 +2967,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 50
+--- !u!114 &7284195116507511925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999734747835005986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02e7519fb343e24b88754bb89952f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 0
+  head: {fileID: 0}
+  hips: {fileID: 0}
 --- !u!1 &7999734747853088636
 GameObject:
   m_ObjectHideFlags: 0
