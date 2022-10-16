@@ -9,13 +9,10 @@ public class PlayerController : MonoBehaviour
     //Playermovement speed
     [SerializeField] float speed;
 
-    //Hip rigidbody, static because it is part of a child object - makes it far easier to work with and only way i could add force towards the mouse position
-    public static Rigidbody hips;
-
-    private void Start()
+    //Sets the global hips variable to the hips rigidbody
+    private void Awake()
     {
-        //Sets hips to the rigidbody
-        hips = GetComponent<Rigidbody>();
+        RotationSingleton.Instance.hips = GetComponent<Rigidbody>();
     }
 
     //Animation set in Update, FixedUpdate is reserved for physics related code
@@ -69,11 +66,11 @@ public class PlayerController : MonoBehaviour
             if(Input.GetKey(KeyCode.LeftShift))
             {
                 //Adds force to the hips to move player forward, speed * 1.5 if player is holding left shift
-                hips.AddForce(hips.transform.forward * speed * 1.5f);
+                RotationSingleton.Instance.hips.AddForce(RotationSingleton.Instance.hips.transform.forward * speed * 1.5f);
             }
             else
             {
-                hips.AddForce(hips.transform.forward * speed);
+                RotationSingleton.Instance.hips.AddForce(RotationSingleton.Instance.hips.transform.forward * speed);
             }
         }
         
@@ -83,11 +80,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 //-hips to move player backwards
-                hips.AddForce(-hips.transform.forward * speed * 1.5f);
+                RotationSingleton.Instance.hips.AddForce(-RotationSingleton.Instance.hips.transform.forward * speed * 1.5f);
             }
             else
             {
-                hips.AddForce(-hips.transform.forward * speed);
+                RotationSingleton.Instance.hips.AddForce(-RotationSingleton.Instance.hips.transform.forward * speed);
             }
         }
     }

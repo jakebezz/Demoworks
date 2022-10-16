@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 390478621}
   - component: {fileID: 390478620}
   m_Layer: 7
-  m_Name: Cube
+  m_Name: MouseLayerWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1820,19 +1820,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7999734747835005986, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
   m_PrefabInstance: {fileID: 7999734748036659553}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &982480872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &982480873 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7999734747835005990, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+  m_PrefabInstance: {fileID: 7999734748036659553}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982480870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c2def036e890aa4bab436515885c1b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 50
 --- !u!1001 &998244080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3838,6 +3830,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2177847119625250600, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: 982480873}
+    - target: {fileID: 2177847119625250600, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177847119625250600, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Parameters.alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.01865387
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7999734746282168284, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: audioSource
       value: 
@@ -3962,6 +3994,18 @@ PrefabInstance:
       propertyPath: targetLimb
       value: 
       objectReference: {fileID: 189850186}
+    - target: {fileID: 7999734747835005993, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.000000037252914
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999734747835005993, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.6800001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999734747835005993, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.000000055879358
+      objectReference: {fileID: 0}
     - target: {fileID: 7999734747853088581, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: targetLimb
       value: 
@@ -3974,6 +4018,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7999734748072188184, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: 982480870}
     - target: {fileID: 7999734748072188184, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: delay
       value: 5
@@ -3990,7 +4038,9 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2177847119625250600, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+    - {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
 --- !u!1001 &8618658993572268507
 PrefabInstance:
