@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5.02
   force: 2000
-  upwardsModifier: 0.05
+  upwardsModifier: 1
   delay: 0.1
   countdown: 0
   hasExploded: 0

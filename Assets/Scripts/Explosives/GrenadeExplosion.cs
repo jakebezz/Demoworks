@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GrenadeExplosion : Explosives
 {
-
     private void Start()
     {
         countdown = delay;
@@ -29,7 +28,7 @@ public class GrenadeExplosion : Explosives
             }
 
             hasExploded = true;
-
+            Instantiate(explosionVFX, new Vector3(transform.position.x, transform.position.y, transform.position.z), new Quaternion(0, 0, 0, 0));
             Destroy(gameObject);
         }
     } 
