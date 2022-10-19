@@ -13,13 +13,11 @@ public class TurnHead : MonoBehaviour
         }
         //Stops the head rotating further than the range
         else if(RotationSingleton.Instance.angle <= -range + 1)
-        {
-            Debug.Log("Mouse Position: " + RotationSingleton.Instance.GetMousePosition());
+        { 
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, -range + 1));
         }
         else if (RotationSingleton.Instance.angle >= range + 1)
         {
-            Debug.Log("Mouse Position: " + RotationSingleton.Instance.GetMousePosition());
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, range));
         }
     }

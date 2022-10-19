@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 3299902887431475301}
   - component: {fileID: -4055474721886074049}
   - component: {fileID: -700509574988245993}
+  - component: {fileID: 3946160086236176621}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -319,11 +320,6 @@ MonoBehaviour:
   delay: 3
   countdown: 0
   hasExploded: 0
-  screenPosition: {x: 0, y: 0, z: 0}
-  worldPosition: {x: 0, y: 0, z: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!54 &-700509574988245993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -340,6 +336,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!65 &3946160086236176621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3299902887431475302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5255502956762664643
 GameObject:
   m_ObjectHideFlags: 0
