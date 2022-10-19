@@ -314,8 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cda68b73aa0e34d9905533162b4d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionVFX: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
   radius: 5
-  force: 500
+  force: 750
   upwardsModifier: 0
   delay: 3
   countdown: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Explosives : MonoBehaviour
 {
+    public GameObject explosionVFX;
+
     public float radius = 0f;
     //Force of explosion
     public float force = 0f;
@@ -16,7 +18,7 @@ public class Explosives : MonoBehaviour
     public float countdown;
     public bool hasExploded = false;
     
-
+    
     public void Explode()
     {
         //Get nearby object + add force + damage
@@ -34,6 +36,7 @@ public class Explosives : MonoBehaviour
         }
 
         //Remove explosive
+        
         Destroy(gameObject);
     }
 }
