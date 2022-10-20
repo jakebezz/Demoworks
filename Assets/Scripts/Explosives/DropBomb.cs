@@ -83,8 +83,5 @@ public class DropBomb : MonoBehaviour
         }
     }
 
-    void help()
-    {
 
-    }
 }

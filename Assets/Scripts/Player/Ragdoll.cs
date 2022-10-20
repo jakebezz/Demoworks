@@ -22,7 +22,7 @@ public class Ragdoll : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
         
 
