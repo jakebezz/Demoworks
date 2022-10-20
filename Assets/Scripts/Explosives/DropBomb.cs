@@ -9,7 +9,10 @@ public class DropBomb : MonoBehaviour
 
     [SerializeField] private GameObject spawnLocationLandmine;
     [SerializeField] private GameObject spawnLocationGrenade;
-   
+
+    [SerializeField] private AudioClip audioClipLauncher;
+    [SerializeField] private AudioClip audioClipClang;
+
     //player ref
     public GameObject character;
 
@@ -65,7 +68,8 @@ public class DropBomb : MonoBehaviour
 
             //creates landmine
             clone = Instantiate(landMine, new Vector3(spawnLocationLandmine.transform.position.x, spawnLocationLandmine.transform.position.y, spawnLocationLandmine.transform.position.z), new Quaternion(0, 0, 0, 0));
-           
+
+            AudioManager.Instance.PlaySoundAtPoint(audioClipLauncher, gameObject.transform.position);
             // get player velocity
             Vector3 playerVelocity = character.GetComponent<Rigidbody>().velocity;
 
@@ -91,6 +95,7 @@ public class DropBomb : MonoBehaviour
         {
             //creates grenade
             clone = Instantiate(grenade, new Vector3(spawnLocationGrenade.transform.position.x, spawnLocationGrenade.transform.position.y, spawnLocationGrenade.transform.position.z), new Quaternion(0, 0, 0, 0));
+            AudioManager.Instance.PlaySoundAtPoint(audioClipClang, gameObject.transform.position);
             //cooldown
             grenadeCoolDown = 3;
             bPressed = true;

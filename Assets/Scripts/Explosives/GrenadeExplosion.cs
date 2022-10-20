@@ -7,6 +7,7 @@ public class GrenadeExplosion : Explosives
     //Stops player from being launched if out of range of grenade
     private bool playerInRange;
 
+    [SerializeField] private AudioClip audioClipGrenageExp;
     private void Start()
     {
         playerInRange = false;
@@ -34,6 +35,7 @@ public class GrenadeExplosion : Explosives
                 }
             }
 
+            AudioManager.Instance.PlaySoundAtPoint(audioClipGrenageExp, gameObject.transform.position);
             hasExploded = true;
 
             Destroy(gameObject);

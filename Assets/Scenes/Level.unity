@@ -10984,6 +10984,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2000735770}
     - target: {fileID: 469496790442868176, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5687d30eabfb1cc428fa0dd1f372b99f, type: 3}
+    - target: {fileID: 469496790442868176, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -10991,6 +10995,14 @@ PrefabInstance:
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 49183604}
+    - target: {fileID: 469496790442868176, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: audioClipClang
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c4f8231801f216498b46daae5beec17, type: 3}
+    - target: {fileID: 469496790442868176, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: audioClipLauncher
+      value: 
+      objectReference: {fileID: 8300000, guid: 5687d30eabfb1cc428fa0dd1f372b99f, type: 3}
     - target: {fileID: 2177847119625250600, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: head
       value: 

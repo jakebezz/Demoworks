@@ -5,6 +5,7 @@ using UnityEngine;
 public class LandmineExplosion : Explosives
 {
     private bool beginCountdown = false;
+    [SerializeField] private AudioClip audioClipLandmineExp;
 
     private void Update()
     {
@@ -39,6 +40,7 @@ public class LandmineExplosion : Explosives
         {
             //explodes landmine
             Explode();
+            AudioManager.Instance.PlaySoundAtPoint(audioClipLandmineExp, gameObject.transform.position);
             beginCountdown = false;
         }
     }

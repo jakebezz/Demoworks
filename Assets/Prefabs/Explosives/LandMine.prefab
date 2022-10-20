@@ -53,6 +53,7 @@ MonoBehaviour:
   delay: 0.2
   countdown: 0
   hasExploded: 0
+  audioClipLandmineExp: {fileID: 8300000, guid: 4065c43a4bdb0334587680bce04dc231, type: 3}
 --- !u!54 &-2002878344523545036
 Rigidbody:
   m_ObjectHideFlags: 0
