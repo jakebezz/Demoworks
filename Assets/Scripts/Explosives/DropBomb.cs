@@ -24,7 +24,14 @@ public class DropBomb : MonoBehaviour
     private float grenadeCoolDown = 0;
     private bool bPressed = false;
 
-    [SerializeField] GameObject playerObj;
+    [SerializeField]
+    private GameObject smoke;
+
+    private void Start()
+    { 
+        //Stops smoke playing when starting game
+        smoke.SetActive(false);
+    }
 
     void Update()
     {
@@ -35,6 +42,8 @@ public class DropBomb : MonoBehaviour
             if(landmineCoolDown <= 0)
             {
                 spacePressed = false;
+                //Reset the smoke state so it can activate again
+                smoke.SetActive(false);
             }
         }
         
@@ -45,6 +54,7 @@ public class DropBomb : MonoBehaviour
             if (grenadeCoolDown <= 0)
             {
                 bPressed = false;
+                smoke.SetActive(false);
             }
         }
 
@@ -71,6 +81,10 @@ public class DropBomb : MonoBehaviour
             clone.GetComponent<Rigidbody>().AddForce(transform.right * 500 + transform.up * 500);
             
             spacePressed = true;
+
+            //Activates the smoke effect at the same postion the Landmine is launched from
+            smoke.SetActive(true);
+            smoke.transform.position = spawnLocationLandmine.transform.position;
         }
 
         else if (Input.GetKeyDown(KeyCode.B) && bPressed == false)
@@ -80,6 +94,9 @@ public class DropBomb : MonoBehaviour
             //cooldown
             grenadeCoolDown = 3;
             bPressed = true;
+
+            smoke.SetActive(true);
+            smoke.transform.position = spawnLocationGrenade.transform.position;
         }
     }
 

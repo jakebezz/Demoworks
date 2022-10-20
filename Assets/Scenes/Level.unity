@@ -5969,6 +5969,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2000735770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616666410369712207, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+  m_PrefabInstance: {fileID: 7999734748036659553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2022265777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10975,6 +10980,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 469496790442868176, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: smoke
+      value: 
+      objectReference: {fileID: 2000735770}
+    - target: {fileID: 469496790442868176, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469496790442868176, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 49183604}
@@ -11234,6 +11247,30 @@ PrefabInstance:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 25138676}
+    - target: {fileID: 8453488752508720175, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453488752508720175, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453488752508720175, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453488752508720175, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453488752508720175, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616666410369712207, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+      propertyPath: m_Name
+      value: Smoke
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2177847119625250600, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
     - {fileID: 4383624743285443263, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
