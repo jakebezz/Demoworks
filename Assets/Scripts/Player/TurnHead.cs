@@ -7,16 +7,16 @@ public class TurnHead : MonoBehaviour
     [SerializeField] private float range;
     private void Update()
     {
-        if (RotationSingleton.Instance.angle > -range && RotationSingleton.Instance.angle < range)
+        if (RotationManager.Instance.angle > -range && RotationManager.Instance.angle < range)
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, RotationSingleton.Instance.angle));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, RotationManager.Instance.angle));
         }
         //Stops the head rotating further than the range
-        else if(RotationSingleton.Instance.angle <= -range + 1)
+        else if(RotationManager.Instance.angle <= -range + 1)
         { 
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, -range + 1));
         }
-        else if (RotationSingleton.Instance.angle >= range + 1)
+        else if (RotationManager.Instance.angle >= range + 1)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, range));
         }

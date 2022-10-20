@@ -23,14 +23,14 @@ public class GrenadeExplosion : Explosives
             if (playerInRange == true)
             {
                 //Stops the player from being able to lauch backwards
-                if (RotationSingleton.Instance.GetMousePosition().x < 0)
+                if (RotationManager.Instance.GetMousePosition().x < 0)
                 {
-                    RotationSingleton.Instance.hips.AddForce(Vector3.down * force, ForceMode.Impulse);
+                    RotationManager.Instance.hips.AddForce(Vector3.down * force, ForceMode.Impulse);
                 }
                 else
                 {
                     //Adds force in the correct direction
-                    RotationSingleton.Instance.hips.AddForce(RotationSingleton.Instance.GetMousePosition() * force, ForceMode.Impulse);
+                    RotationManager.Instance.hips.AddForce(RotationManager.Instance.GetMousePosition() * force, ForceMode.Impulse);
                 }
             }
 

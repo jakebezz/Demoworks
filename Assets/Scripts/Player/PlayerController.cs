@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     //Sets the global hips variable to the hips rigidbody
     private void Awake()
     {
-        RotationSingleton.Instance.hips = GetComponent<Rigidbody>();
+        RotationManager.Instance.hips = GetComponent<Rigidbody>();
     }
 
     //Animation set in Update, FixedUpdate is reserved for physics related code
@@ -68,11 +68,11 @@ public class PlayerController : MonoBehaviour
             if(Input.GetKey(KeyCode.LeftShift))
             {
                 //Adds force to the hips to move player forward, speed * 1.5 if player is holding left shift
-                RotationSingleton.Instance.hips.AddForce(RotationSingleton.Instance.hips.transform.forward * speed * 1.5f);
+                RotationManager.Instance.hips.AddForce(RotationManager.Instance.hips.transform.forward * speed * 1.5f);
             }
             else
             {
-                RotationSingleton.Instance.hips.AddForce(RotationSingleton.Instance.hips.transform.forward * speed);
+                RotationManager.Instance.hips.AddForce(RotationManager.Instance.hips.transform.forward * speed);
             }
         }
         
@@ -82,11 +82,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 //-hips to move player backwards
-                RotationSingleton.Instance.hips.AddForce(-RotationSingleton.Instance.hips.transform.forward * speed * 1.5f);
+                RotationManager.Instance.hips.AddForce(-RotationManager.Instance.hips.transform.forward * speed * 1.5f);
             }
             else
             {
-                RotationSingleton.Instance.hips.AddForce(-RotationSingleton.Instance.hips.transform.forward * speed);
+                RotationManager.Instance.hips.AddForce(-RotationManager.Instance.hips.transform.forward * speed);
             }
         }
     }
