@@ -68,7 +68,7 @@ public class DropBomb : MonoBehaviour
             clone.GetComponent<Rigidbody>().velocity = playerVelocity;
 
             //adds a force to arch the landmine up and over the player
-            clone.GetComponent<Rigidbody>().AddForce(transform.right * 500 + transform.up * 500);
+            clone.GetComponent<Rigidbody>().AddForce(transform.forward * -500 + transform.up * 500);
             
             spacePressed = true;
         }

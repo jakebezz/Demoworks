@@ -46,10 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e87854d0abedf4b9191d26bcceff87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionVFX: {fileID: 0}
   radius: 5.02
   force: 2000
   upwardsModifier: 1
-  delay: 0.1
+  delay: 0.2
   countdown: 0
   hasExploded: 0
 --- !u!54 &-2002878344523545036
