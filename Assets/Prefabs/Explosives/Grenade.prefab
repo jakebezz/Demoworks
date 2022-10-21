@@ -227,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 3299902887431475302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.652369, y: 0.6500001, z: 3.5184567}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6624309646381253624}
@@ -316,9 +316,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionVFX: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
   radius: 5
-  force: 750
+  force: 500
   upwardsModifier: 0
-  delay: 3
+  delay: 2
   countdown: 0
   hasExploded: 0
   audioClipGrenageExp: {fileID: 8300000, guid: 08e0c93dc86b0de4082e369cce9f30ee, type: 3}

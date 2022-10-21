@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVFX: {fileID: 0}
-  radius: 5.02
+  radius: 5
   force: 2000
   upwardsModifier: 1
   delay: 0.2
