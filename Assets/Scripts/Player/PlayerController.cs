@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     //Playermovement speed
     [SerializeField] float speed;
 
+    public Transform respawnPoint;
+
     //Sets the global hips variable to the hips rigidbody
     private void Awake()
     {
@@ -88,6 +90,15 @@ public class PlayerController : MonoBehaviour
             {
                 RotationManager.Instance.hips.AddForce(-RotationManager.Instance.hips.transform.forward * speed);
             }
+        }
+    }
+
+    //If player dies respawn them
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Death")
+        {
+            transform.position = respawnPoint.position;
         }
     }
 }

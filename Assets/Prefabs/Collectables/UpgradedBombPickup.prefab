@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3645564222836072697}
   - component: {fileID: 2170165882480547263}
   - component: {fileID: 5755043556708497205}
-  - component: {fileID: 7006589988231649485}
   m_Layer: 0
   m_Name: Spike (3)
   m_TagString: Untagged
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f04f0c037c941246adbaa0099038069, type: 2}
+  - {fileID: 2100000, guid: 4f7d461ed3427e049a9256dcb36d9f60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7006589988231649485
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3137089504003134256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &3223827550151539830
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +94,6 @@ GameObject:
   - component: {fileID: 8181276911412494552}
   - component: {fileID: 8580207480051782246}
   - component: {fileID: 9220847178201618049}
-  - component: {fileID: 7461066354656790308}
   m_Layer: 0
   m_Name: Spike (5)
   m_TagString: Untagged
@@ -160,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f04f0c037c941246adbaa0099038069, type: 2}
+  - {fileID: 2100000, guid: 4f7d461ed3427e049a9256dcb36d9f60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -182,20 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7461066354656790308
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3223827550151539830}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &3299902887431475302
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,12 +177,10 @@ GameObject:
   - component: {fileID: 3299902887431475296}
   - component: {fileID: 3299902887431475299}
   - component: {fileID: 3299902887431475298}
-  - component: {fileID: 3299902887431475301}
-  - component: {fileID: -4055474721886074049}
-  - component: {fileID: -700509574988245993}
-  - component: {fileID: 3946160086236176621}
+  - component: {fileID: -4376665856602653215}
+  - component: {fileID: 4093257753055790957}
   m_Layer: 0
-  m_Name: Grenade
+  m_Name: UpgradedBombPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,7 +235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 310b27d2ccf2a8644a2a5bdb73e3cc46, type: 2}
+  - {fileID: 2100000, guid: ae22fda4caafa8c40844e1a5f4841418, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -289,20 +257,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3299902887431475301
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299902887431475302}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.56
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4055474721886074049
+--- !u!114 &-4376665856602653215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,34 +266,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3299902887431475302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84cda68b73aa0e34d9905533162b4d63, type: 3}
+  m_Script: {fileID: 11500000, guid: d2f826dca692c30499156d1bb2a65302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionVFX: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
-  radius: 5
-  force: 700
-  upwardsModifier: 0
-  delay: 2
-  countdown: 0
-  hasExploded: 0
-  audioClipGrenageExp: {fileID: 8300000, guid: 08e0c93dc86b0de4082e369cce9f30ee, type: 3}
---- !u!54 &-700509574988245993
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299902887431475302}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 8
-  m_CollisionDetection: 0
---- !u!65 &3946160086236176621
+  explosive: {fileID: 3299902887431475302, guid: 3c7f2aa3b0a50a24fbaefd397d50301e, type: 3}
+  dropBomb: {fileID: 0}
+--- !u!65 &4093257753055790957
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -349,7 +282,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Size: {x: 1.4, y: 1.4, z: 1.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5255502956762664643
 GameObject:
@@ -362,7 +295,6 @@ GameObject:
   - component: {fileID: 5476615341505273072}
   - component: {fileID: 3737248098464854902}
   - component: {fileID: 616850511132079224}
-  - component: {fileID: 5977716853482446629}
   m_Layer: 0
   m_Name: Spike (1)
   m_TagString: Untagged
@@ -413,7 +345,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f04f0c037c941246adbaa0099038069, type: 2}
+  - {fileID: 2100000, guid: 4f7d461ed3427e049a9256dcb36d9f60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -435,20 +367,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5977716853482446629
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5255502956762664643}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &6208387033074356698
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +378,6 @@ GameObject:
   - component: {fileID: 711871861023919886}
   - component: {fileID: 842159183268738302}
   - component: {fileID: 3669859032929884468}
-  - component: {fileID: 3875918291264971365}
   m_Layer: 0
   m_Name: Spike (4)
   m_TagString: Untagged
@@ -511,7 +428,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f04f0c037c941246adbaa0099038069, type: 2}
+  - {fileID: 2100000, guid: 4f7d461ed3427e049a9256dcb36d9f60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -533,20 +450,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3875918291264971365
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6208387033074356698}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &6770149703367968037
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +461,6 @@ GameObject:
   - component: {fileID: 3043633998000735100}
   - component: {fileID: 3680069535243341588}
   - component: {fileID: 6292443127578963738}
-  - component: {fileID: 3376638665744613913}
   m_Layer: 0
   m_Name: Spike (2)
   m_TagString: Untagged
@@ -609,7 +511,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f04f0c037c941246adbaa0099038069, type: 2}
+  - {fileID: 2100000, guid: 4f7d461ed3427e049a9256dcb36d9f60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -631,20 +533,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3376638665744613913
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6770149703367968037}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &7961794686168681037
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +544,6 @@ GameObject:
   - component: {fileID: 6624309646381253624}
   - component: {fileID: 4256864720107971045}
   - component: {fileID: 1377567436151778192}
-  - component: {fileID: 8472562739928228658}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -707,7 +594,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f04f0c037c941246adbaa0099038069, type: 2}
+  - {fileID: 2100000, guid: 8972a5edf40a943408b43a6a8cad03df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -729,17 +616,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8472562739928228658
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7961794686168681037}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

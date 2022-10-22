@@ -1,29 +1,18 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    [SerializeField] private Transform player;
-    [SerializeField] private Transform respawnPoint;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public PlayerController player;
+    //Will be set by an empty object
+    [SerializeField] private Transform respawn;
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("touched");
-        if (other.CompareTag("Player"))
+        //If player touches checkpoint, set checkpoint to respawn point
+        if (other.tag == "Player")
         {
-            player.transform.position = respawnPoint.transform.position;
+            player.respawnPoint = respawn;
         }
     }
 }

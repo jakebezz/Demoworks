@@ -7,6 +7,9 @@ public class DropBomb : MonoBehaviour
     [SerializeField] private GameObject landMine;
     [SerializeField] private GameObject grenade;
 
+    [SerializeField] private GameObject upgradedLandMine;
+    [SerializeField] private GameObject upgradedGrenade;
+
     [SerializeField] private GameObject spawnLocationLandmine;
     [SerializeField] private GameObject spawnLocationGrenade;
 
@@ -29,6 +32,9 @@ public class DropBomb : MonoBehaviour
 
     [SerializeField]
     private GameObject smoke;
+
+    //List of upgrades player has
+    public List<GameObject> explosiveUpgrade = new List<GameObject>();
 
     private void Start()
     { 
@@ -66,8 +72,17 @@ public class DropBomb : MonoBehaviour
             //cooldown length
             landmineCoolDown = 3;
 
-            //creates landmine
-            clone = Instantiate(landMine, new Vector3(spawnLocationLandmine.transform.position.x, spawnLocationLandmine.transform.position.y, spawnLocationLandmine.transform.position.z), new Quaternion(0, 0, 0, 0));
+            //creates upgraded landmine if one is in players inventory
+            if (explosiveUpgrade.Count > 0 && explosiveUpgrade.Contains(upgradedLandMine))
+            {
+                clone = Instantiate(upgradedLandMine, new Vector3(spawnLocationLandmine.transform.position.x, spawnLocationLandmine.transform.position.y, spawnLocationLandmine.transform.position.z), new Quaternion(0, 0, 0, 0));
+                explosiveUpgrade.Remove(upgradedLandMine);
+            }
+            else
+            {
+                //creates landmine
+                clone = Instantiate(landMine, new Vector3(spawnLocationLandmine.transform.position.x, spawnLocationLandmine.transform.position.y, spawnLocationLandmine.transform.position.z), new Quaternion(0, 0, 0, 0));
+            }
 
             AudioManager.Instance.PlaySoundAtPoint(audioClipLauncher, gameObject.transform.position);
             // get player velocity
@@ -82,7 +97,7 @@ public class DropBomb : MonoBehaviour
             clone.GetComponent<Rigidbody>().velocity = playerVelocity;
 
             //adds a force to arch the landmine up and over the player
-            clone.GetComponent<Rigidbody>().AddForce(transform.forward * -500 + transform.up * 500);
+            clone.GetComponent<Rigidbody>().AddForce(transform.forward * -400 + transform.up * 400);
             
             spacePressed = true;
 
@@ -93,8 +108,18 @@ public class DropBomb : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.B) && bPressed == false)
         {
-            //creates grenade
-            clone = Instantiate(grenade, new Vector3(spawnLocationGrenade.transform.position.x, spawnLocationGrenade.transform.position.y, spawnLocationGrenade.transform.position.z), new Quaternion(0, 0, 0, 0));
+
+            if (explosiveUpgrade.Contains(upgradedGrenade))
+            {
+                clone = Instantiate(upgradedGrenade, new Vector3(spawnLocationGrenade.transform.position.x, spawnLocationGrenade.transform.position.y, spawnLocationGrenade.transform.position.z), new Quaternion(0, 0, 0, 0));
+                explosiveUpgrade.Remove(upgradedGrenade);
+            }
+            else
+            {
+                //creates grenade
+                clone = Instantiate(grenade, new Vector3(spawnLocationGrenade.transform.position.x, spawnLocationGrenade.transform.position.y, spawnLocationGrenade.transform.position.z), new Quaternion(0, 0, 0, 0));
+            }
+
             AudioManager.Instance.PlaySoundAtPoint(audioClipClang, gameObject.transform.position);
             //cooldown
             grenadeCoolDown = 3;

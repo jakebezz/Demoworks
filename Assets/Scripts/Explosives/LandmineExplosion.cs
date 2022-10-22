@@ -29,7 +29,17 @@ public class LandmineExplosion : Explosives
             // countdown begins if theres a collision with player
             countdown = delay;
         }
+        
+        //Sets isKinematic to true when touching the ground, stops the player from accidently pushing it with feet
+        if(collision.gameObject.tag == "Ground")
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+
+            rb.isKinematic = true;
+        }
     }
+
+    
 
     void countDown()
     {
