@@ -48,6 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosive: {fileID: 693218932073285565, guid: c0b43e536c681b546865bf05d23c7106, type: 3}
   dropBomb: {fileID: 0}
+  mesh:
+  - {fileID: 1275483947696967970}
+  - {fileID: 8640273681095657636}
 --- !u!65 &2079116715280049888
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class ExplosiveUpgrade : MonoBehaviour
 
     [SerializeField] private DropBomb dropBomb;
 
+    //Use to hide pickup after it has been picked up
+    [SerializeField] private MeshRenderer[] mesh;
+
     //Rotates upgrade
     void Update()
     {
@@ -19,10 +22,27 @@ public class ExplosiveUpgrade : MonoBehaviour
     //Adds the upgrade to list
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        //Player can only get explosive if mesh is enabled
+        if (other.tag == "Player" && mesh[0].enabled == true)
         {
             dropBomb.explosiveUpgrade.Add(explosive);
-            Destroy(gameObject);
+            
+            foreach(MeshRenderer i in mesh)
+            {
+                i.enabled = false;
+            }
+
+            StartCoroutine(RespawnExplosive());
+        }
+    }
+
+    //"Respawns" explosive after a set amount of seconds
+    IEnumerator RespawnExplosive()
+    {
+        yield return new WaitForSeconds(6);
+        foreach (MeshRenderer i in mesh)
+        {
+            i.enabled = true;
         }
     }
 }
