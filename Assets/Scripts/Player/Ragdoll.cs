@@ -9,6 +9,9 @@ public class Ragdoll : MonoBehaviour
 
     [SerializeField] private JointDrive joint;
 
+    //Used to change the value of angularXDrive while player is in air, used in inspector for testing purposes
+    [SerializeField] private float xDriveAmount;
+
     //bool for determining whether player is on the ground
     public bool isGrounded = true;
 
@@ -17,22 +20,17 @@ public class Ragdoll : MonoBehaviour
     //Audio Controll
     public AudioClip[] audioClip;
 
-    private void Start()
-    {
-        
-    }
 
     void FixedUpdate()
     {
-        
-
         if (isGrounded == false)
         {
             foreach (ConfigurableJoint Rjoint in ragdollJoints)
             {
                 //if the player is off the ground, every limb in the array will ragdoll
                 joint = Rjoint.angularXDrive;
-                joint.positionSpring = 0f;
+                //Changed value from 0, should improve how the player stands up after launching
+                joint.positionSpring = xDriveAmount;
                 Rjoint.angularXDrive = joint;
             }
         }
@@ -55,7 +53,8 @@ public class Ragdoll : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter(Collider other)
+    //Changed to OnTriggerStay, should stop bug that stopped player standing up
+    private void OnTriggerStay(Collider other)
     {
         //collision with ground
         if (other.gameObject.tag == "Ground")

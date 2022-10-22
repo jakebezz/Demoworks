@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionVFX: {fileID: 0}
   radius: 5
-  force: 2000
+  force: 2200
   upwardsModifier: 1
-  delay: 0.2
+  delay: 0.3
   countdown: 0
   hasExploded: 0
   audioClipLandmineExp: {fileID: 8300000, guid: 4065c43a4bdb0334587680bce04dc231, type: 3}
