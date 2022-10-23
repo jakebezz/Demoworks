@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Explosives : MonoBehaviour
 {
-    public GameObject explosionVFX;
+    public ParticleSystem particleSystem;
 
     public float radius = 0f;
     //Force of explosion
@@ -17,8 +17,7 @@ public class Explosives : MonoBehaviour
     //Used to actually delay the explosion
     public float countdown;
     public bool hasExploded = false;
-    
-    
+
     public void Explode()
     {
         //Get nearby object + add force + damage
@@ -35,8 +34,9 @@ public class Explosives : MonoBehaviour
             }
         }
 
+        //Instantiate the particles as destorying the object stops it from playing
+        Instantiate(particleSystem, transform.position, transform.rotation).Play();
         //Remove explosive
-        
         Destroy(gameObject);
     }
 }

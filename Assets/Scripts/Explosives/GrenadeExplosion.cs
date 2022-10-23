@@ -49,6 +49,8 @@ public class GrenadeExplosion : Explosives
 
             AudioManager.Instance.PlaySoundAtPoint(audioClipGrenageExp, gameObject.transform.position);
             hasExploded = true;
+            //Instantiate the particles as destorying the object stops it from playing
+            Instantiate(particleSystem, transform.position, transform.rotation).Play();
 
             Destroy(gameObject);
         }
