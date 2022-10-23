@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - Hips
   - Head
+  - Coin
   layers:
   - Default
   - TransparentFX
