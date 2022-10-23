@@ -7,8 +7,8 @@ public class DropBomb : MonoBehaviour
     [SerializeField] private GameObject landMine;
     [SerializeField] private GameObject grenade;
 
-    [SerializeField] private GameObject upgradedLandMine;
-    [SerializeField] private GameObject upgradedGrenade;
+    public GameObject upgradedLandMine;
+    public GameObject upgradedGrenade;
 
     [SerializeField] private GameObject spawnLocationLandmine;
     [SerializeField] private GameObject spawnLocationGrenade;

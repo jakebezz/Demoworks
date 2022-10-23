@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody hips;
 
+    public float coins = 0;
+
     //Playermovement speed
     [SerializeField] float speed;
 
@@ -100,6 +102,10 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Death")
         {
             transform.position = respawnPoint.position;
+        }
+        else if (other.tag == "Coin")
+        {
+            coins += 1;
         }
     }
 }
