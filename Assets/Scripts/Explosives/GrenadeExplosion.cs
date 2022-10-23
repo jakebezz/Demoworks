@@ -8,10 +8,22 @@ public class GrenadeExplosion : Explosives
     private bool playerInRange;
 
     [SerializeField] private AudioClip audioClipGrenageExp;
+
+    private GameObject[] playerHead;
+    private TurnHead turnHead;
+    private GameObject[] playerHips;
+    private PlayerController player;
+
     private void Start()
     {
         playerInRange = false;
         countdown = delay;
+
+        playerHead = GameObject.FindGameObjectsWithTag("Head");
+        turnHead = playerHead[0].GetComponent<TurnHead>();
+
+        playerHips = GameObject.FindGameObjectsWithTag("Hips");
+        player = playerHips[0].GetComponent<PlayerController>();
     }
 
     void FixedUpdate()
@@ -24,14 +36,14 @@ public class GrenadeExplosion : Explosives
             if (playerInRange == true)
             {
                 //Stops the player from being able to lauch backwards
-                if (RotationManager.Instance.GetMousePosition().x < 0)
+                if (turnHead.GetMousePosition().x < 0)
                 {
-                    RotationManager.Instance.hips.AddForce(Vector3.down * force, ForceMode.Impulse);
+                    player.hips.AddForce(Vector3.down * force, ForceMode.Impulse);
                 }
                 else
                 {
                     //Adds force in the correct direction
-                    RotationManager.Instance.hips.AddForce(RotationManager.Instance.GetMousePosition() * force, ForceMode.Impulse);
+                    player.hips.AddForce(turnHead.GetMousePosition() * force, ForceMode.Impulse);
                 }
             }
 

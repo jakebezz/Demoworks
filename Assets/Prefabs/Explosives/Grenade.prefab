@@ -322,6 +322,10 @@ MonoBehaviour:
   countdown: 0
   hasExploded: 0
   audioClipGrenageExp: {fileID: 8300000, guid: 08e0c93dc86b0de4082e369cce9f30ee, type: 3}
+  playerHead: {fileID: 7999734746683335470, guid: c8ffe2b82b160d24587cf0ade7fad367, type: 3}
+  turnHead: {fileID: 0}
+  playerHips: {fileID: 0}
+  player: {fileID: 0}
 --- !u!54 &-700509574988245993
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class LandmineExplosion : Explosives
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player" && beginCountdown == false)
+        if((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Head" || collision.gameObject.tag == "Hips") && beginCountdown == false)
         {
             // countdown begins if theres a collision with player
             countdown = delay;

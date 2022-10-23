@@ -23,7 +23,7 @@ public class ExplosiveUpgrade : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Player can only get explosive if mesh is enabled
-        if (other.tag == "Player" && mesh[0].enabled == true)
+        if ((other.tag == "Player" || other.tag == "Hips" || other.tag == "Head") && mesh[0].enabled == true)
         {
             dropBomb.explosiveUpgrade.Add(explosive);
             

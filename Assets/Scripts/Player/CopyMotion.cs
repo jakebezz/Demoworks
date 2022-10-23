@@ -35,6 +35,7 @@ public class CopyMotion : MonoBehaviour
 
         if (active == true)
         {
+            //Fixes the limbs copying in opposite motion
             if (mirror == true)
             {
                 joint.targetRotation = Quaternion.Inverse(targetLimb.rotation);

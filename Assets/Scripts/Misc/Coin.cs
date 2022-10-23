@@ -17,7 +17,7 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Head" || other.gameObject.tag == "Hips")
         {
             //Plays audioClip at the position of the coin
             AudioManager.Instance.PlaySoundAtPoint(audioClip, gameObject.transform.position);
