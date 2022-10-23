@@ -9,17 +9,23 @@ public class UI : MonoBehaviour
 
     public DropBomb explosivesList;
 
+    public TMP_Text landmineUpgradeText;
+
+    public TMP_Text grenadeUpgradeText;
+
+    public TMP_Text timerText;
+
     private float landmineCount = 0;
 
     private float grenadeCount = 0;
 
     private float listTotal = 0;
 
+    private float timer;
+
     public TMP_Text coinText;
 
-    public TMP_Text landmineUpgradeText;
-
-    public TMP_Text grenadeUpgradeText;
+   
 
     private void Start()
     {
@@ -29,6 +35,8 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += 1 * Time.deltaTime;
+
         coinText.text = "Coins: " + player.coins;
         
         if (listTotal != explosivesList.explosiveUpgrade.Count)
@@ -38,15 +46,15 @@ public class UI : MonoBehaviour
 
         landmineUpgradeText.text = "Upgraded landmines: " + landmineCount;
 
-        grenadeUpgradeText.text = "Upgraded grenades: " + landmineCount;
+        grenadeUpgradeText.text = "Upgraded grenades: " + grenadeCount;
 
-       
+        timerText.text = timer.ToString("0");
     }
 
     public void updateUpgrades()
     {
-      landmineCount = 0;
-      grenadeCount = 0;
+        landmineCount = 0;
+        grenadeCount = 0;
 
       foreach (GameObject explosive in explosivesList.explosiveUpgrade)
       {
