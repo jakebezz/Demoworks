@@ -5,57 +5,75 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    public PlayerController player;
+    [SerializeField]
+    private PlayerController player;
 
-    public DropBomb explosivesList;
+    //need this to know how many explosives the player has
+    [SerializeField]
+    private DropBomb explosivesList;        
 
-    public TMP_Text landmineUpgradeText;
+    //references for the text to change on the UI
+    #region
+    [SerializeField]
+    private TMP_Text landmineUpgradeText;
+    [SerializeField]
+    private TMP_Text grenadeUpgradeText;
+    [SerializeField]
+    private TMP_Text timerText;
+    [SerializeField]
+    private TMP_Text coinText;
+    #endregion     
 
-    public TMP_Text grenadeUpgradeText;
-
-    public TMP_Text timerText;
 
     private float landmineCount = 0;
-
     private float grenadeCount = 0;
 
+    //counts how many special explosives the player has
     private float listTotal = 0;
 
-    private float timer;
+    //timer at the top of the screen, showing how long the player is taking.
+    private float timer;                   
 
-    public TMP_Text coinText;
+   
 
    
 
     private void Start()
     {
-        listTotal = explosivesList.explosiveUpgrade.Count;
+        //makes the list total equal to the players inventory upon start up
+        listTotal = explosivesList.explosiveUpgrade.Count;                
     }
 
     // Update is called once per frame
     void Update()
     {
+        //starts timer
         timer += 1 * Time.deltaTime;
 
+        //updates coin count
         coinText.text = "Coins: " + player.coins;
-        
-        if (listTotal != explosivesList.explosiveUpgrade.Count)
+
+        //will change the upgrade text if the amount of explosives in the players inventory has changed
+        if (listTotal != explosivesList.explosiveUpgrade.Count)   
         {
             updateUpgrades();
         }
 
-        landmineUpgradeText.text = "Upgraded landmines: " + landmineCount;
+        //change explosive text
+        landmineUpgradeText.text = "Upgraded landmines: " + landmineCount;      
+        grenadeUpgradeText.text = "Upgraded grenades: " + grenadeCount;         
 
-        grenadeUpgradeText.text = "Upgraded grenades: " + grenadeCount;
-
-        timerText.text = timer.ToString("0");
+        //change timer text
+        timerText.text = timer.ToString("0");       
     }
 
     public void updateUpgrades()
     {
+        //resets the explosive text
         landmineCount = 0;
         grenadeCount = 0;
-
+        
+        //calculates how many of each special the player has
       foreach (GameObject explosive in explosivesList.explosiveUpgrade)
       {
         if (explosive == explosivesList.upgradedLandMine)
@@ -68,6 +86,7 @@ public class UI : MonoBehaviour
             grenadeCount += 1;
         }
       }
+        //resets the lis total
         listTotal = explosivesList.explosiveUpgrade.Count;
 
         

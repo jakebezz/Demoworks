@@ -9,11 +9,11 @@ public class Explosives : MonoBehaviour
     //ExplosionSound
     public AudioClip explosionSound;
 
-    public float radius = 0f;
+    [SerializeField] private float radius = 0f;
     //Force of explosion
     public float force = 0f;
     //Forces explosion up
-    public float upwardsModifier = 0f; 
+    [SerializeField] private float upwardsModifier = 0f; 
     //Time it takes for explosive to explode
     public  float delay = 0f;
     

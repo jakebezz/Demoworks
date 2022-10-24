@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                //-hips to move player backwards
+                //hips to move player backwards
                 hips.AddForce(-hips.transform.forward * speed * 1.5f);
             }
             else
@@ -96,13 +96,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //If player dies respawn them
+   
     private void OnTriggerEnter(Collider other)
     {
+        //If player dies respawn them
         if (other.tag == "Death")
         {
             transform.position = respawnPoint.position;
         }
+        //if the player picks up a coin
         else if (other.tag == "Coin")
         {
             coins += 1;

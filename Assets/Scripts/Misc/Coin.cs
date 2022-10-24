@@ -10,6 +10,7 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //rotates the coin in a smooth fashion
         Vector3 rotationVector = transform.rotation.eulerAngles;
         rotationVector.y += 1f;
         transform.rotation = Quaternion.Euler(rotationVector);
