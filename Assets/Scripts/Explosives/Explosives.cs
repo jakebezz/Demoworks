@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Explosives : MonoBehaviour
 {
+    //Explosion Effect
     public ParticleSystem particleSystem;
+    //ExplosionSound
+    public AudioClip explosionSound;
 
     public float radius = 0f;
     //Force of explosion

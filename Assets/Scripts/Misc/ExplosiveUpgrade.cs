@@ -70,7 +70,7 @@ public class ExplosiveUpgrade : MonoBehaviour
             {
                 i.enabled = false;
             }
-
+            //Starts timer
             activeTimer = true;
         }
     }

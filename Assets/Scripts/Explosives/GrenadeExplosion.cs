@@ -7,8 +7,6 @@ public class GrenadeExplosion : Explosives
     //Stops player from being launched if out of range of grenade
     private bool playerInRange;
 
-    [SerializeField] private AudioClip audioClipGrenageExp;
-
     private GameObject[] playerHead;
     private TurnHead turnHead;
     private GameObject[] playerHips;
@@ -47,7 +45,7 @@ public class GrenadeExplosion : Explosives
                 }
             }
 
-            AudioManager.Instance.PlaySoundAtPoint(audioClipGrenageExp, gameObject.transform.position);
+            AudioManager.Instance.PlaySoundAtPoint(explosionSound, gameObject.transform.position);
             hasExploded = true;
             //Instantiate the particles as destorying the object stops it from playing
             Instantiate(particleSystem, transform.position, transform.rotation).Play();
