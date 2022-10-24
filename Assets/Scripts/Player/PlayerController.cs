@@ -104,10 +104,5 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = respawnPoint.position;
         }
-        //if the player picks up a coin
-        else if (other.tag == "Coin")
-        {
-            coins += 1;
-        }
     }
 }

@@ -7,6 +7,8 @@ public class Coin : MonoBehaviour
     //Audio clip instead of Audio source so that sound can be played when destroying coin
     [SerializeField] private AudioClip audioClip;
 
+    [SerializeField] private PlayerController player;
+
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +25,7 @@ public class Coin : MonoBehaviour
             //Plays audioClip at the position of the coin
             AudioManager.Instance.PlaySoundAtPoint(audioClip, gameObject.transform.position);
             Destroy(gameObject);
+            player.coins += 1;
         }
     }
 }
