@@ -55,7 +55,7 @@ public class TurnHead : MonoBehaviour
 
         //Finds the direction that force will be added by fidning the difference between worldPosition and the players position
         Vector3 direction = worldPosition - head.transform.position;
-        //Basically calucualtes the direction the player needs to go by normalizing it, not %100 sure how it works but it works
+        //Basically calucualtes the direction the player needs to go by normalizing it, making the vector have a magnitude of one and essentially stops the player from lauching miles into the sky when exploding from the grenade
         direction = direction.normalized;
 
         return direction;

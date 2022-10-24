@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CopyMotion : MonoBehaviour
 {
+    //Limb to copy - the TargetAnimation
     [SerializeField] Transform targetLimb;
+    //The joint on the player character
     [SerializeField] ConfigurableJoint joint;
 
     //Mirror to bool that reverse the target rotation if true
@@ -24,6 +26,7 @@ public class CopyMotion : MonoBehaviour
 
     void Update()
     {
+        //Only copy if the player is on the ground
         if(ragdoll.isGrounded == true)
         {
             active = true;

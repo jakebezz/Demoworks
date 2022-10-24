@@ -15,8 +15,6 @@ public class Ragdoll : MonoBehaviour
     //bool for determining whether player is on the ground
     public bool isGrounded = true;
 
-   
-
     //Audio Controll
     public AudioClip[] audioClip;
 
