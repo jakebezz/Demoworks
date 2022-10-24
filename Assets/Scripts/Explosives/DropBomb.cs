@@ -17,7 +17,7 @@ public class DropBomb : MonoBehaviour
     [SerializeField] private AudioClip audioClipClang;
 
     //player ref
-    public GameObject character;
+    [SerializeField] private GameObject character;
 
     //clone of either a landmine or grenade
     private GameObject clone;
@@ -111,6 +111,7 @@ public class DropBomb : MonoBehaviour
 
             if (explosiveUpgrade.Contains(upgradedGrenade))
             {
+                //creates upgraded grenade
                 clone = Instantiate(upgradedGrenade, new Vector3(spawnLocationGrenade.transform.position.x, spawnLocationGrenade.transform.position.y, spawnLocationGrenade.transform.position.z), new Quaternion(0, 0, 0, 0));
                 explosiveUpgrade.Remove(upgradedGrenade);
             }
