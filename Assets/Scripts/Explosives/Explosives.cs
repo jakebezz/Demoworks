@@ -21,6 +21,9 @@ public class Explosives : MonoBehaviour
     public float countdown;
     public bool hasExploded = false;
 
+    //Only used on the final mine placed on the mine, stops it from destroying itself
+    public bool isFinalMine = false;
+
     public void Explode()
     {
         //Get nearby object + add force + damage
@@ -39,7 +42,11 @@ public class Explosives : MonoBehaviour
 
         //Instantiate the particles as destorying the object stops it from playing
         Instantiate(particleSystem, transform.position, transform.rotation).Play();
-        //Remove explosive
-        Destroy(gameObject);
+
+        //Remove explosive if not the final mine
+        if (isFinalMine == false)
+        {
+            Destroy(gameObject);
+        }
     }
 }
