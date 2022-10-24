@@ -317,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleSystem: {fileID: 7443604311401345004}
   radius: 5
-  force: 800
+  force: 1000
   upwardsModifier: 0
   delay: 2
   countdown: 0
