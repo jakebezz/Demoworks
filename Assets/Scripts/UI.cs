@@ -13,7 +13,7 @@ public class UI : MonoBehaviour
     private DropBomb explosivesList;        
 
     //references for the text to change on the UI
-    #region
+    #region TMPText
     [SerializeField]
     private TMP_Text landmineUpgradeText;
     [SerializeField]
