@@ -81,6 +81,10 @@ public class PlayerController : MonoBehaviour
             }
         }
         
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
         if (Input.GetKey(KeyCode.S) && groundCheck.isGrounded == true)
         {
